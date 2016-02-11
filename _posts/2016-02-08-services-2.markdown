@@ -1,0 +1,12 @@
+---
+layout: default
+img: radio.png
+category: Services
+title: Русское Радио
+description: |
+---
+Один из лучших способов учить русский язык - слушать радио на русском языке!
+Jeden ze způsobů jak se učit ruský jazyk - poslech ruského rádia. Příjemnou zábavu!
+One of the best way to learn Russian language - listen Russian radio. Enjoy!
+
+[Радио](http://radio.ruhit.pro)

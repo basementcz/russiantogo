@@ -1,0 +1,10 @@
+---
+layout: default
+img: lunch.jpg
+category: Services
+title: Будьте вежливы за столом!
+description: |
+---
+Прия́тного аппети́та! [prijа́tnava apitita]
+= Dobrou chuť!
+= Bon Appetit!
