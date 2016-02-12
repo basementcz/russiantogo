@@ -2,7 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
+url: http://basementcz.github.io
+baseurl: option to /russiantogo
 title: Russian To Go/Chcete mluvit rusky?
 email: your-email@domain.com
 author: Your Name
