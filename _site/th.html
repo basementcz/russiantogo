@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css"/>
+  </head>
+  <body>
+    <div id="chart"></div>
+    <script>
+      var pubnub = new PubNub({
+        publishKey: 'pub-c-b3d163df-da2b-431c-9dd9-40f961014d20',
+        subscribeKey: 'sub-c-2f0158a6-a151-11e6-a756-02ee2ddab7fe'
+      });
+      var channel = "tempeon";
+      eon.chart({
+        channels: [channel],
+        flow: true,
+        limit: 48,
+        history: true,
+        pubnub: pubnub,
+        generate: {
+          bindto: '#chart',
+          data: {
+            type: 'spline',
+            labels: false
+          }
+        }
+      }); 
+
+    </script>
+ 
+  </body>
+</html>
