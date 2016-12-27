@@ -197,3 +197,7 @@ p.copyright {
 #submit-success {
   margin-top: 10px;
 }
+
+.navbar.navbar-default {
+    margin-bottom: 10px;
+}
