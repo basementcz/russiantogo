@@ -1,16 +1,16 @@
-	<div class="row">
+<div class="row">
     <div class="col-md-5 col-md-offset-4">
-<!-- Hidden message to show if contact is successful. -->
-<div id="submit-success" class="collapse alert alert-success" role="alert">
-  Спасибо! Сообщения отправлено! Возможно вам ответят, хахаха!
-</div>
+        <!-- Hidden message to show if contact is successful. -->
+        <div id="submit-success" class="collapse alert alert-success" role="alert">
+            Спасибо! Сообщения отправлено! Возможно вам ответят, хахаха!
+        </div>
 
-<!-- Hidden message to show if user encounters errors. -->
-<div id="submit-errors" class="collapse">
-  It looks like there was an error submitting the form.
-  Please try again later.
-</div>
-</div>
+        <!-- Hidden message to show if user encounters errors. -->
+        <div id="submit-errors" class="collapse">
+            It looks like there was an error submitting the form.
+            Please try again later.
+        </div>
+    </div>
 </div>
 <div class="container">
 	<div class="row">
@@ -43,33 +43,39 @@
                 </form>
 	</div>
 </div>
-<!-- Footer -->
+
 <footer>
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <ul class="list-inline">
-                    <li>
-                        <a href="#home">Главная</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#about">О нас</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href"{{site.baseurl}}/blog">Блог</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#contact">Контакты</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">{{ site.copyright }}</p>
-            </div>
-            <div class="col-md-4">
-                {{ site.credits }}
-            </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Služby</h2>
+          <p><a href="{{site.baseurl}}/personal">Individualní výuka ruštiny</a></p>
+          <p><a href="{{site.baseurl}}/groups">Skupinová výuka ruštiny</a></p> 
+          <p><a href="{{site.baseurl}}/translations">Překlady</a></p> 
+          <p><a href="{{site.baseurl}}/conversations">Ruský konverzační klub</a></p>
         </div>
+        <div class="col-md-4">
+          <h2>Kontaktujte nás</h2>
+          <p>+420 xxx xx xx xx</p>
+          <p>@seznam.cz</p>
+       </div>
+        <div class="col-md-4">
+          <h2>Sledujte nás </h2>
+          <ul class="list-inline">
+		   {% for social in site.social %}
+           <li>
+                <a href="{{ social.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ social.title }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
+           </li>
+           {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+
+    <p class="copyright text-muted small">{{ site.copyright }}</p>
+
     </div>
 </footer>
