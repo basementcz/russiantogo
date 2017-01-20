@@ -131,10 +131,18 @@ h6 {
     margin-top: 0;
 }
 
+.footer-services {
+    text-align: center
+}
+
 @media(max-width:1199px) {
     ul.banner-social-buttons {
         float: left;
         margin-top: 15px;
+    }
+    
+    .footer {
+        text-align: center;
     }
 }
 
@@ -153,6 +161,10 @@ h6 {
 
     ul.banner-social-buttons > li:last-child {
         margin-bottom: 0;
+    }
+
+    .footer {
+        text-align: center;
     }
 }
 

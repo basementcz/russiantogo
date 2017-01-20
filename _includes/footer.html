@@ -1,52 +1,7 @@
-<div class="row">
-    <div class="col-md-5 col-md-offset-4">
-        <!-- Hidden message to show if contact is successful. -->
-        <div id="submit-success" class="collapse alert alert-success" role="alert">
-            Спасибо! Сообщения отправлено! Возможно вам ответят, хахаха!
-        </div>
-
-        <!-- Hidden message to show if user encounters errors. -->
-        <div id="submit-errors" class="collapse">
-            It looks like there was an error submitting the form.
-            Please try again later.
-        </div>
-    </div>
-</div>
-<div class="container">
-	<div class="row">
-		<form role="form" id="contact-form" class="contact-form">
-                    <div class="row">
-                		<div class="col-md-2 col-md-offset-4">
-                  		<div class="form-group">
-                            <input type="text" class="form-control" name="name" autocomplete="off" id="Name" placeholder="Name">
-                  		</div>
-                  	</div>
-                    	<div class="col-md-2">
-                  		<div class="form-group">
-                            <input class="form-control" type="email" name="_replyto"
-                                     required placeholder="email@address.com">
-                                     <input type="hidden" name="_subject" value="New submission!" />
-                      </div>
-                      <input type="hidden" name="_next" value="//heartcoins.org/thanks.html" />
-                      <input type="hidden" name="_subject" value="Website contact" />
- <input type="text" name="_gotcha" style="display:none" />
-                  	</div>
-                  	</div>
-                  	<div class="row">
-                  		<div class="col-md-4 col-md-offset-4">
-                  		<div class="form-group">
-                            <textarea class="form-control textarea" rows="3" name="message" id="Message" placeholder="Message"></textarea>
-                  		</div>
-                      <button type="submit" name="sbutton" class="sbutton btn main-btn pull-right">Send a message</button>
-                  	  </div>
-                    </div>
-                </form>
-	</div>
-</div>
 
 <footer>
 
-    <div class="container">
+    <div class="container footer footer-services">
       <div class="row">
         <div class="col-md-4">
           <h2>Služby</h2>
@@ -59,7 +14,51 @@
           <h2>Kontaktujte nás</h2>
           <p>+420 xxx xx xx xx</p>
           <p>@seznam.cz</p>
+          <div class="row">
+              <div class="col-md-12 ">
+                  <!-- Hidden message to show if contact is successful. -->
+                  <div id="submit-success" class="collapse alert alert-success" role="alert">
+                      Спасибо! Сообщения отправлено! Возможно вам ответят, хахаха!
+                  </div>
+
+                  <!-- Hidden message to show if user encounters errors. -->
+                  <div id="submit-errors" class="collapse">
+                      It looks like there was an error submitting the form.
+                      Please try again later.
+                  </div>
+              </div>
+          </div>
+    <div class="row">
+      <form role="form" id="contact-form" class="contact-form">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                  <input type="text" class="form-control" name="name" autocomplete="off" id="Name" placeholder="Name">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+                  <input class="form-control" type="email" name="_replyto"
+                          required placeholder="email@address.com">
+                          <input type="hidden" name="_subject" value="New submission!" />
+            </div>
+            <input type="hidden" name="_next" value="//heartcoins.org/thanks.html" />
+            <input type="hidden" name="_subject" value="Website contact" />
+            <input type="text" name="_gotcha" style="display:none" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <textarea class="form-control textarea" rows="3" name="message" id="Message" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" name="sbutton" class="sbutton btn main-btn pull-right">Send a message</button>
+          </div>
+        </div>
+      </form>
+    </div>
        </div>
+
         <div class="col-md-4">
           <h2>Sledujte nás </h2>
           <ul class="list-inline">
