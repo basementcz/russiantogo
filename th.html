@@ -2,6 +2,8 @@
   <head>
     <script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
     <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   </head>
   <body>
     <div id="chart"></div>
@@ -27,6 +29,154 @@
       }); 
 
     </script>
- 
+ <script>
+   // create angular app
+	var myApp = angular.module('myApp', []);
+
+	// create angular controller
+	myApp.controller('myController', ['$scope','$http', function($scope, $http) {
+
+		// function to submit the form after all validation has occurred	sd		
+		$scope.submitForm = function() {
+
+			// check to make sure the form is completely valid
+			if ($scope.userForm.$valid) {
+				/*$http({
+        url: "http://formspree.io/andrii.matukhno@gmail.com",
+        data: {
+            'email': "sdfsfsdf",
+            'message': "sdfsdfsdf"
+        },
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    });*/
+        $http.post("http://formspree.io/andrej2704@gmail.com", {
+            email: "sdfsfsdf",
+            message: "sdfsdfsdf"
+        })
+			}
+		};
+	}]);
+    </script>
+    <div ng-app="myApp" ng-controller="myController">
+<div class="container">
+<div class="row">  
+   
+<div class="col-sm-6">
+    <!-- FORM ============ -->
+  
+    <form name="userForm" ng-submit="submitForm()" novalidate>
+
+        <!-- CARD -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.card.$invalid && !userForm.card.$pristine }">
+            <label>Card Number</label>
+            <input type="text"  class="form-control" name="card" ng-model="user.card" required ng-pattern="/^[0-9]{16,20}$/" >
+   
+        </div>
+      
+        <!-- USERNAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+            <label>Username</label>
+            <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8">
+            <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+            <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+        </div>
+        
+        <!-- EMAIL -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" ng-model="user.email">
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+        
+    </form>
+  </div>
+  <div class="col-sm-6">
+    <!-- VALIDATION TABLES ======== -->    
+    <div class="row">
+        <div class="col-xs-3">
+            <h3>Form</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.$valid, danger: userForm.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.$pristine, danger: !userForm.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.$dirty }">Dirty</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-3">
+            <h3>Card</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.card.$valid, danger: userForm.card.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.card.$pristine, danger: !userForm.card.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$dirty }">Dirty</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$touched }">Touched</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-3">
+            <h3>Username</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.username.$valid, danger: userForm.username.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.username.$pristine, danger: !userForm.username.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.username.$dirty }">Dirty</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.username.$touched }">Touched</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-3">
+            <h3>Email</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$valid, danger: userForm.email.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$pristine, danger: !userForm.email.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$dirty }">Dirty</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$touched }">Touched</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+</div>
+</div>
+    
   </body>
 </html>
