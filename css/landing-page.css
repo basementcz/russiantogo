@@ -36,6 +36,10 @@ h6 {
         width: 10rem;
         margin-left: 34%;
     }
+
+    .intro-divider {
+        margin-bottom: 4.5rem;
+    }
 }
 
 @media only screen and (min-width : 441px) and (max-width : 767px) {
