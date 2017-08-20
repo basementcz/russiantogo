@@ -242,3 +242,9 @@ p.copyright {
 .navbar.navbar-default {
     margin-bottom: 10px;
 }
+
+.profile {
+    margin-top: 45%;
+    width: 70%;
+    height: 70%;
+}
