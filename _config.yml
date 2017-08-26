@@ -3,7 +3,8 @@
 # ----------------------- #
 
 url: http://basementcz.github.io
-baseurl: "http://rulearn.com"
+# baseurl: "http://rulearn.com"
+baseurl: /russiantogo
 title: Rulearn
 email: tatiana.rulearn@gmail.com
 author: Rulearn

@@ -71,6 +71,20 @@ h6 {
     } 
 }
 
+@media only screen and (min-width : 320px) and (max-width : 568px) and (orientation : portrait) {  
+    .img-circle.profile.profile {
+        margin-top: 0;
+        width: 40%;
+    } 
+}
+
+@media only screen and (min-width : 320px) and (max-width : 568px) and (orientation : landscape) {  
+    .img-circle.profile.profile {
+        margin-top: 0;
+        width: 20%;
+    } 
+}
+
 @media only screen and (min-width : 441px) and (max-width : 767px) {
     .thumbnail.no-border {
         width: 6rem;
@@ -81,6 +95,12 @@ h6 {
 @media only screen and (min-width : 768px) {
     .thumbnail.no-border {
         width: 5rem;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .footer-services .services {
+        display: none;
     }
 }
 
