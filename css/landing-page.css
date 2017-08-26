@@ -40,6 +40,35 @@ h6 {
     .intro-divider {
         margin-bottom: 4.5rem;
     }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px)  { 
+    .img-circle.profile.profile {
+        margin-top: 0;
+        width: 15%;
+    } 
+}
+
+@media only screen and (min-width : 375px) and (max-width : 667px) {  
+    .img-circle.profile.profile {
+        margin-top: 0;
+        width: 20%;
+    } 
+}
+
+@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : landscape) {  
+    .img-circle.profile.profile {
+        margin-top: 0;
+        width: 15%;
+    } 
+}
+
+@media only screen and (min-width : 414px) and (max-width : 736px) and (orientation : landscape) {  
+    .img-circle.profile.profile {
+        margin-top: 0;
+        width: 15%;
+    } 
 }
 
 @media only screen and (min-width : 441px) and (max-width : 767px) {
