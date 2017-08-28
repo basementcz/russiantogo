@@ -21,6 +21,8 @@ phone: +420 776 586 451
 # Build settings
 markdown: kramdown
 permalink: pretty
+sass:
+    style: compressed
 
 # ----------------------- #
 #   3rd Party Settings    #
