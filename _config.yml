@@ -22,8 +22,8 @@ phone: +420 776 586 451
 markdown: kramdown
 permalink: pretty
 sass:
+    sass_dir: _sass
     style: compressed
-
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #

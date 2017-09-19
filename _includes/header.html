@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top navbar-main" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -10,6 +10,9 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand page-scroll" href="#home">{{ site.title }}</a>
+            <!-- <a class="navbar-brand page-scroll" href="#home">
+                <img class="navbar-brand-logo" src="{{ site.baseurl }}/img/logo.png" alt="">
+            </a> -->
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -32,7 +35,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="page-scroll" href="{{site.baseurl}}/feedback">{{site.feedback}}</a>
+                        <a class="page-scroll" href="#feedback">{{site.feedback}}</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">{{site.contacts}}</a>

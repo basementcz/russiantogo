@@ -1,6 +1,6 @@
 ---
 ---
-
+@import "feedbackCarousel";
 body,
 html {
     width: 100%;
@@ -244,7 +244,7 @@ h6 {
 }
 
 footer {
-    padding: 50px 0;
+    padding-top: 50px;
     background-color: #f8f8f8;
 }
 
@@ -287,6 +287,12 @@ p.copyright {
 
 .navbar.navbar-default {
     margin-bottom: 10px;
+}
+
+.navbar-brand-logo {
+    height: 170%;
+    position: relative;
+    bottom: 0.5rem;
 }
 
 .profile {
