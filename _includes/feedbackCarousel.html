@@ -6,150 +6,53 @@
         <div class="container">
             <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="block-text ">
-                                        <div class="mark">20.5.2017
+                    {% for members in site.data.feedbacks.members %}
+                        {% if forloop.first == true %}
+                            <div class="item active">
+                                <div class="row">
+                                    {% for item in members.sub_members %}
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="block-text ">
+                                            <div class="mark">{{item.time}}
+                                            </div>
+                                            <p>	{{item.text}}
+                                            </p>
+                                            <ins class="sprite sprite-i-triangle"></ins>
                                         </div>
-                                        <p>	
-                                            Таня очень хорошая, милая, 
-                                            улыбчивая и терпеливая. Она мне помогала в течение двух лет, 
-                                            чтобы я подготовилась к экзаменам. Она даёт много домашних 
-                                            упражнений и ее уроки весёлые :-). Можно говорить с ней обо всем. 
-                                            И сегодня я сдала экзамены!!! Большое спасибо тебе за все!  
-                                        </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="{{ site.baseurl }}/img/female.png" alt="">
+                                        <div class="person-text">
+                                            <div class="reviewer">
+                                                <img class="img-responsive " src="{{ site.baseurl }}/img/{{item.sex}}.png" alt="">
+                                            </div>
+                                            <a href="#">{{item.name}}</a>
                                         </div>
-                                        <a href="#">Kristýna Kubšová</a>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-xs">
-                                    <div class="block-text ">
-                                        <div class="mark">28.4.2017
-                                        </div>
-                                        <p>
-                                            Výuka probíhala perfektně, 
-                                            splnila to co měla. Elsa se vždy těšila a moc ji to s vámi bavilo. 
-                                            Vždy byla zvědavá jakou formu zvolíte. Bavilo jí učení pomocí her, 
-                                            které jste vymýšlela. a moc ráda si s vámi povídala, vždy promýšlela co vám vše 
-                                            musí říci. 
-                                        </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="{{ site.baseurl }}/img/female.png" alt="">
-                                        </div>
-                                        <a href="#">Blanka Kuzmická</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                                    <div class="block-text ">
-                                        <div class="mark">10.3.2017
-                                        </div>
-                                        <p>
-                                                Je skoda, ze uz nemate moc casu, vyuky s Vami mi vyhovovaly, 
-                                                я был очень довольный с вами )  
-                                                Nejvic ocenuji Vas profesionalni pristup a take je videt, 
-                                                ze Vas to bavi. To je uplne idealni kombinace.   
-                                        </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="{{ site.baseurl }}/img/male.png" alt="">
-                                        </div>
-                                        <a href="#">Jakub Stehlík</a>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="block-text ">
-                                        <div class="mark">28.7.2016
+                        {% else %}
+                            <div class="item">
+                                    <div class="row">
+                                        {% for item in members.sub_members %}
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="block-text ">
+                                                <div class="mark">{{item.time}}
+                                                </div>
+                                                <p>	{{item.text}}
+                                                </p>
+                                                <ins class="sprite sprite-i-triangle"></ins>
+                                            </div>
+                                            <div class="person-text">
+                                                <div class="reviewer">
+                                                    <img class="img-responsive " src="{{ site.baseurl }}/img/{{item.sex}}.png" alt="">
+                                                </div>
+                                                <a href="#">{{item.name}}</a>
+                                            </div>
                                         </div>
-                                        <p>	
-                                                Paní Tanja je skvělá učitelka. 
-                                                Doučovala mě a manžela. Jak ona sama se svým vystupováním, přístupem, 
-                                                tak i její lekce byly velice příjemné a zajímavé. 
-                                                Kromě doručování nám pomáhala i s překlady. Doporučuji.  
-                                        </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="{{ site.baseurl }}/img/female.png" alt="">
-                                        </div>
-                                        <a href="#">Michaela Salák</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-xs">
-                                    <div class="block-text ">
-                                        <div class="mark">17.4.2016
-                                        </div>
-                                        <p>
-                                                Táňu můžu jedině doporučit! Je trpělivá, 
-                                                časově flexibilní a spoustu mě toho naučila. 
-                                                Kdo by se rád naučil nebo zdokonalil v ruštině, tak ať neváhá.   
-                                        </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="{{ site.baseurl }}/img/male.png" alt="">
-                                        </div>
-                                        <a href="#">Michal Havel</a>
+                                        {% endfor %}
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                                    <div class="block-text ">
-                                        <div class="mark">21.2.2016
-                                        </div>
-                                        <p>
-                                                Tana je skvela ucitelka,diky ni a jeji trpelivosti jsem zvladla zacatky rustiny..vrele doporucuji! 
-                                        </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="{{ site.baseurl }}/img/female.png" alt="">
-                                        </div>
-                                        <a href="#">Jana Sosa Arias</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="block-text ">
-                                        <div class="mark">28.1.2016
-                                        </div>
-                                        <p>	
-                                            S výukou jsem byl spokojen, vysvětlujete srozumitelně a tak, že to člověk pochopí 😊 
-                                            váš přístup je také super, že např. chodíte na čas. Také jsem rád, že jste výukové materiály přinesla, 
-                                            jako okopírovanou učebnici atd.  😊 hodnotil bych pouze pozitivně. Přeji hodně štěstí 
-                                            do budoucna a úspěchu 😊 
-                                        </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="{{ site.baseurl }}/img/male.png" alt="">
-                                        </div>
-                                        <a href="#">Mikuláš</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        {% endif %}
+                    {% endfor %}
                     </div>
                     <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
