@@ -1,8 +1,9 @@
 <section id="feedback">
-<div class="tcb-carousel-reviews">
-    <div class="container text-center">
-        <h2>{{site.feedback}}</h2>
-    </div>
+<div class="container text-center feedback">
+    <h2 class="desktop">{{site.feedback}}</h2>
+    <h2 class="mobile"><a href="{{ site.baseurl }}/feedback">{{site.feedback}}</a></h2>
+</div>
+<div class="tcb-carousel-reviews ">
         <div class="container">
             <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -62,5 +63,4 @@
                     </a>
                 </div>
         </div>
-    </div>
 </section>
