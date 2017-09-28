@@ -305,3 +305,13 @@ p.copyright {
     margin-left: 40%;
     padding-bottom: 1rem;
 }
+
+.imgContainer {
+    background: url(../img/profileNew.jpg) no-repeat;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: -3px 0px;
+    background-size: 115%;
+    margin: 0 auto;
+  }
