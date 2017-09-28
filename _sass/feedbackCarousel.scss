@@ -1,21 +1,26 @@
 @media only screen and (min-width : 320px) and (max-width : 993px) {  
-    .tcb-carousel-reviews {
-        display: none; 
-    }
-    .feedback .desktop {
+    .feedback,
+    .page-scroll.feedback-link-desktop {
         display: none;
     }
-    .container.text-center .mobile {
+
+    .navbar-nav .feedback-link-mobile {
         display: block;
+    }
+}
+
+@media only screen and (min-width : 994px) {  
+    .page-scroll.feedback-link-desktop {
+        display: block;
+    }
+
+    .navbar-nav .feedback-link-mobile {
+        display: none;
     }
 }
 
 .feedback {
     background: #f8f8f8;
-
-    .mobile {
-        display: none;
-    }
 }
 
 .tcb-carousel-reviews{
