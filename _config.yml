@@ -3,8 +3,8 @@
 # ----------------------- #
 
 url: http://basementcz.github.io
-baseurl: "http://rulearn.com"
-# baseurl: /russiantogo
+# baseurl: "http://rulearn.com"
+baseurl: /russiantogo
 title: Rulearn
 email: tatiana.rulearn@gmail.com
 author: Rulearn
@@ -22,8 +22,7 @@ parallel_localization: false
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
-plugins:
-  - jekyll-polyglot
+plugins: [jekyll-polyglot]
 # Build settings
 markdown: kramdown
 permalink: pretty
