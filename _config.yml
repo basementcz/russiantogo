@@ -23,6 +23,8 @@ parallel_localization: false
 #    Jekyll & Plugins     #
 # ----------------------- #
 plugins: [jekyll-polyglot]
+gems:
+- jekyll-polyglot
 # Build settings
 markdown: kramdown
 permalink: pretty
