@@ -2,7 +2,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-                  <input type="text" class="form-control" name="name" autocomplete="off" id="Name" placeholder="Name">
+                  <input type="text" class="form-control" name="name" autocomplete="off" id="Name" placeholder="{{site.data[site.active_lang].general.name}}">
             </div>
           </div>
           <div class="col-md-6">
@@ -19,9 +19,9 @@
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
-              <textarea class="form-control textarea" rows="3" name="message" id="Message" placeholder="Message"></textarea>
+              <textarea class="form-control textarea" rows="3" name="message" id="Message" placeholder="{{site.data[site.active_lang].general.message}}"></textarea>
             </div>
-            <button type="submit" name="sbutton" class="sbutton btn main-btn pull-right">Send a message</button>
+            <button type="submit" name="sbutton" class="sbutton btn main-btn pull-right">{{site.data[site.active_lang].general.send_button}}</button>
           </div>
         </div>
       </form>

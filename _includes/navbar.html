@@ -14,30 +14,41 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-            	<li>
-                    <a class="page-scroll" href="{{site.baseurl}}/#about">O mně</a>
+            	<li> 
+                    {% if site.active_lang == "cz" %}
+                        {% assign base_url = "#about" %}
+                    {% elsif  site.active_lang == "en" %}
+                        {% assign base_url = "en/#about" %}
+                    {% endif %}
+                    <a class="page-scroll" href="{{site.baseurl}}/{{base_url}}">{{site.data[site.active_lang].general.about_me}}</a>
                 </li>
                 <!--<li>
                     <a class="page-scroll" href="{{site.baseurl}}/blog">Блог</a>
                 </li>-->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nabídka<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{site.data[site.active_lang].general.lessons}}<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{site.baseurl}}/personal">{{site.personalLessons}}</a></li>
-                        <li><a href="{{site.baseurl}}/groups">{{site.groupLessons}}</a></li>
-                        <li><a href="{{site.baseurl}}/corp">{{site.corpLessons}}</a></li>
-                        <li><a href="{{site.baseurl}}/skype">{{site.skypeLessons}}</a></li>
-                        <li><a href="{{site.baseurl}}/translations">{{site.translations}}</a></li>
-                        <li><a href="{{site.baseurl}}/conversations">{{site.conversations}}</a></li>
+                            <li><a href="{{site.baseurl}}/personal">{{site.data[site.active_lang].navbar.personalLessons}}</a></li>
+                            <li><a href="{{site.baseurl}}/groups">{{site.data[site.active_lang].navbar.groupLessons}}</a></li>
+                            <li><a href="{{site.baseurl}}/corp">{{site.data[site.active_lang].navbar.corpLessons}}</a></li>
+                            <li><a href="{{site.baseurl}}/skype">{{site.data[site.active_lang].navbar.skypeLessons}}</a></li>
+                            <li><a href="{{site.baseurl}}/translations">{{site.data[site.active_lang].navbar.translations}}</a></li>
+                            <li><a href="{{site.baseurl}}/conversations">{{site.data[site.active_lang].navbar.conversations}}</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a class="page-scroll feedback-link-desktop" href="{{site.baseurl}}/#feedback">{{site.feedback}}</a>
-                    <a class="feedback-link-mobile" href="{{ site.baseurl }}/feedback">{{site.feedback}}</a>
+                    <a class="page-scroll feedback-link-desktop" href="#feedback">{{site.data[site.active_lang].navbar.feedback}}</a>
+                    <a class="feedback-link-mobile" href="{{ site.baseurl }}/feedback">{{site.data[site.active_lang].navbar.feedback}}</a>                        
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">{{site.contacts}}</a>
+                    <a class="page-scroll" href="#contact">{{site.data[site.active_lang].navbar.contacts}}</a>
                 </li>
+                
+                {% for tongue in site.languages %}
+                <li>
+                <a {% if tongue == site.active_lang %}style="font-weight: bold; color:black;"{% endif %} href="{% if tongue == site.default_lang %} {{site.baseurl}}{{page.url}} {% else %} {{site.baseurl}}/{{ tongue }}{{page.url}} {% endif %}">{{ tongue }}</a> 
+                </li>
+                {% endfor %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->

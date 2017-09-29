@@ -1,4 +1,5 @@
     <!-- About Section -->
+    {% assign lang = site.active_lang %}
     <section id="about" class="container content-section text-center">
         <br>
         <div class="row vcenter">
@@ -7,13 +8,9 @@
                     </div>
               </div>
             <div class="col-lg-10">
-              <h2>O mně</h2>
+              <h2>{{site.data[site.active_lang].general.about_me}}</h2>
               <br/>
-                <p>Привет! Jsem ráda, že to čtete 🙂 To znamená, že máte rádi ruský jazyk a chcete ho studovat. 
-                <p>Jste na správném místě! Já jsem profesionální lektorka ruštiny, a také rodila mluvčí. Učím studentů z Česká, Itálie, Kanady, Anglie, Španělska atd. </p>
-                <p>Moje hodiny jsou vždycky zajímavé a užitečné. Učební plán je vždy dle individuálních potřeb studenta. </p>
-                <p>Tady si můžete najít aktuální nabídku kurzu a také nějakou užitečnou informace. Ať se Vám s výukou ruštiny daří! </p>
-                </p>
+                {{site.data[site.active_lang].general.about_me_desc}}
                 <br/>
               </div>
         </div>

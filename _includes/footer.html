@@ -4,16 +4,17 @@
       <div class="container footer footer-services">
         <div class="row">
           <div class="col-md-4 services">
-            <h2>Služby</h2>
-            <p><a href="{{site.baseurl}}/personal">{{site.personalLessons}}</a></p>
-            <p><a href="{{site.baseurl}}/groups">{{site.groupLessons}}</a></p>
-            <p><a href="{{site.baseurl}}/corp">{{site.corpLessons}}</a></p>
-            <p><a href="{{site.baseurl}}/skype">{{site.skypeLessons}}</a></p>
-            <p><a href="{{site.baseurl}}/translations">{{site.translations}}</a></p>
-            <p><a href="{{site.baseurl}}/conversations">{{site.conversations}}</a></p>
+            <h2>{{site.data[site.active_lang].general.lessons}}</h2>
+            <p><a href="{{site.baseurl}}/personal">{{site.data[site.active_lang].navbar.personalLessons}}</a></p>
+            <p><a href="{{site.baseurl}}/groups">{{site.data[site.active_lang].navbar.groupLessons}}</a></p>
+            <p><a href="{{site.baseurl}}/corp">{{site.data[site.active_lang].navbar.corpLessons}}</a></p>
+            <p><a href="{{site.baseurl}}/skype">{{site.data[site.active_lang].navbar.skypeLessons}}</a></p>
+            <p><a href="{{site.baseurl}}/translations">{{site.data[site.active_lang].navbar.translations}}</a></p>
+            <p><a href="{{site.baseurl}}/conversations">{{site.data[site.active_lang].navbar.conversations}}</a></p>
+
           </div>
           <div class="col-md-4">
-            <h2>Kontaktujte mně</h2>
+            <h2>{{site.data[site.active_lang].general.contact_me}}</h2>
             <p>{{site.phone}}</p>
             <p>{{site.email}}</p>
             <div class="row">
@@ -35,7 +36,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                    <input type="text" class="form-control" name="name" autocomplete="off" id="Name" placeholder="Name">
+                    <input type="text" class="form-control" name="name" autocomplete="off" id="Name" placeholder="{{site.data[site.active_lang].general.name}}">
               </div>
             </div>
             <div class="col-md-6">
@@ -52,9 +53,9 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <textarea class="form-control textarea" rows="3" name="message" id="Message" placeholder="Message"></textarea>
+                <textarea class="form-control textarea" rows="3" name="message" id="Message" placeholder="{{site.data[site.active_lang].general.message}}"></textarea>
               </div>
-              <button type="submit" name="sbutton" class="sbutton btn main-btn pull-right">Send a message</button>
+              <button type="submit" name="sbutton" class="sbutton btn main-btn pull-right">{{site.data[site.active_lang].general.send_button}}</button>
             </div>
           </div>
         </form>
@@ -62,7 +63,7 @@
         </div>
 
           <div class="col-md-4">
-            <h2>Sledujte mně </h2>
+            <h2>{{site.data[site.active_lang].general.follow_me}}</h2>
             <ul class="list-inline">
         {% for social in site.social %}
             <li>

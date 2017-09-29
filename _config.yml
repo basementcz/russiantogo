@@ -3,21 +3,27 @@
 # ----------------------- #
 
 url: http://basementcz.github.io
-baseurl: "http://rulearn.com"
-# baseurl: /russiantogo
+# baseurl: "http://rulearn.com"
+baseurl: /russiantogo
 title: Rulearn
 email: tatiana.rulearn@gmail.com
 author: Rulearn
-description: > 
+description: 
   'Rulearn'
 copyright: 'Copyright &copy; 2017 All Rights Reserved.'
 credits: 'Rulearn'
 phone: +420 776 586 451
 
+languages: ["cz", "en"]
+default_lang: "cz"
+exclude_from_localization: ["js", "css", "font-awesome-4.1.0", "fonts", "img"]
+parallel_localization: true
+
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
-
+plugins:
+  - jekyll-polyglot
 # Build settings
 markdown: kramdown
 permalink: pretty
@@ -31,13 +37,4 @@ sass:
 social:
   - title: facebook
     url: https://www.facebook.com/RussianToGo/?fref=ts
-
-# constants
-personalLessons: Individuální výuka ruštiny
-groupLessons: Skupinová výuka
-translations: Překlady a Korektura
-conversations: Ruský konverzační klub
-corpLessons: Firemní výuka ruštiny
-skypeLessons: Výuka ruštiny přes Skype     
-feedback: Reference 
-contacts: Kontakt        
+       
