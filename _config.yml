@@ -17,7 +17,7 @@ phone: +420 776 586 451
 languages: ["cz", "en"]
 default_lang: "cz"
 exclude_from_localization: ["js", "css", "font-awesome-4.1.0", "fonts", "img"]
-parallel_localization: true
+parallel_localization: false
 
 # ----------------------- #
 #    Jekyll & Plugins     #
