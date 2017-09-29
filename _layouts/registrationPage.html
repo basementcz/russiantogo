@@ -18,7 +18,29 @@
 <div class="container">
 		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8P26BZk8CLDTGDZ4N7OpJK_6UfQiCwA3qOUjFJSMYy2s3rA/viewform?embedded=true" width="100%" height="2050" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 	</div>
-		{% include lessonsFooter.html %}
-		{% include js.html %}
+	<footer>
+		  <div class="container footer footer-services">
+			<div class="row">
+
+			  <div class="col-md-12">
+				<h2>Sledujte mně </h2>
+				<ul class="list-inline">
+			{% for social in site.social %}
+				<li>
+					  <a href="{{ social.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ social.title }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
+				</li>
+				{% endfor %}
+				</ul>
+			  </div>
+			</div>
+	
+			<hr>
+	
+	
+		  <p class="copyright text-muted small text-center">{{ site.copyright }}</p>
+	
+		  </div>
+	</footer>
+	{% include js.html %}
 	</body>
 </html>
